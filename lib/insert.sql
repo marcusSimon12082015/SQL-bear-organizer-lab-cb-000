@@ -4,7 +4,7 @@ VALUES
 ('Rowdy',8,'F','green','wild',1),
 ('Tabitha',45,'M','red','wild',0),
 ('Sergeant Brown',6,'F','green','wild',0),
-('Melissa',7,'F','yellow','wild',1),
+('Melissa',7,'F','yellow','goofy',1),
 ('Grinch',8,'F','red','wild',1),
-('Wendy',4,'M','red','wild',0),
+('Wendy',4,'M','red','goofy',0),
 (NULL,12,'F','green','wild',0);
