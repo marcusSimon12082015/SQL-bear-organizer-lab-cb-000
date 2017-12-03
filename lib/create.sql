@@ -1,4 +1,4 @@
-CREATE TABLE bears 
+CREATE TABLE bears
 (
   id INTEGER,
   name TEXT,
@@ -6,5 +6,5 @@ CREATE TABLE bears
   gender TEXT(1),
   color TEXT,
   temparment TEXT,
-  alive BOOLEAN  
+  alive BOOLEAN
 );
