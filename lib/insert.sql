@@ -1,4 +1,4 @@
-INSERT INTO bears(name,age,gender,color,temperament,alive) 
+INSERT INTO bears(name,age,gender,color,temperament,alive)
 VALUES
 ('Mr. Chocolate',6,'M','blue','wild',1),
 ('Rowdy',8,'F','green','wild',1),
