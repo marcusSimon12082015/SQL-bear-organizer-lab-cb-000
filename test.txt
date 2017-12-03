@@ -4,25 +4,22 @@ creating bears table
   creates a bears table with a age field
   creates a bears table with a gender field
   creates a bears table with a color field
-  creates a bears table with a temperament field (FAILED - 1)
+  creates a bears table with a temperament field
+  creates a bears table with an alive field
+  creates a bears table with an id as a primary key (FAILED - 1)
 
 Failures:
 
-  1) creating bears table creates a bears table with a temperament field
-     Failure/Error: expect{@db.execute("SELECT temperament FROM bears;")}.to_not raise_exception
-       expected no Exception, got #<SQLite3::SQLException: no such column: temperament> with backtrace:
-         # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.10/lib/sqlite3/database.rb:91:in `initialize'
-         # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.10/lib/sqlite3/database.rb:91:in `new'
-         # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.10/lib/sqlite3/database.rb:91:in `prepare'
-         # /usr/local/rvm/gems/ruby-2.3.1/gems/sqlite3-1.3.10/lib/sqlite3/database.rb:134:in `execute'
-         # ./spec/create_spec.rb:25:in `block (3 levels) in <top (required)>'
-         # ./spec/create_spec.rb:25:in `block (2 levels) in <top (required)>'
-     # ./spec/create_spec.rb:25:in `block (2 levels) in <top (required)>'
+  1) creating bears table creates a bears table with an id as a primary key
+     Failure/Error: expect(@db.execute("PRAGMA table_info(bears);").detect { |arr| arr[-1] == 1 && arr[2] == "INTEGER" }.length).to eq(6)
+     NoMethodError:
+       undefined method `length' for nil:NilClass
+     # ./spec/create_spec.rb:33:in `block (2 levels) in <top (required)>'
 
-Finished in 0.00587 seconds (files took 0.30972 seconds to load)
-5 examples, 1 failure
+Finished in 0.007 seconds (files took 0.44807 seconds to load)
+7 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/create_spec.rb:24 # creating bears table creates a bears table with a temperament field
+rspec ./spec/create_spec.rb:32 # creating bears table creates a bears table with an id as a primary key
 
